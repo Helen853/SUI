@@ -7,31 +7,44 @@ import SwiftUI
 
 struct ContentView: View {
     @State var isOnTogle = false
+    
     var body: some View {
-        VStack(alignment: .leading) {
-            Text("Карта1").font(.system(size: 20))
-                .font(.system(size: 20, weight: .bold))
-        }
-        
-
-        Spacer(minLength: 46)
-        
         ZStack {
-            RoundedRectangle(cornerRadius: 16 ).fill(Color.green).offset(x: isOnTogle ? 174: 0)
-                .frame(width: 360, height: 200)
-            Text("50 000,00 ₽").offset(x: isOnTogle ? 174: 0, y: 16)
-                .frame(width: 290, height: 30)
-                .foregroundColor(Color.white)
-            Text("доступно").offset(x: isOnTogle ? 174: 0, y: 46)
-                .frame(width: 290, height: 30)
-                .foregroundColor(Color.white)
+            Rectangle()
+                .fill(Color("ColorGround"))
             
-        }.animation(.spring())
-        Spacer(minLength: 458)
-        
+            VStack(alignment: .leading) {
+                Spacer(minLength: 40)
+                Text("Карта1").font(.system(size: 20, weight: .bold))
+                    .frame(width: 290, height: 30, alignment: .leading)
+                Spacer(minLength: 46)
+                
+                ZStack(alignment: .top) {
+                    RoundedRectangle(cornerRadius: 16 ).fill(Color("ColorCard"))
+                        .frame(width: 360, height: 200, alignment: .center)
+                    
+                    Text("50 000,00 ₽").offset(y: 16)
+                        .frame(width: 290, height: 30, alignment: .leading)
+                        .foregroundColor(Color.white)
+                        .font(.system(size: 20, weight: .bold))
+                    Text("доступно").offset(y: 46)
+                        .frame(width: 290, height: 30, alignment: .leading)
+                        .foregroundColor(Color.white)
+                        .font(.system(size: 16))
+                    Image("logo_mir").frame(width: 100, height: 42, alignment: .trailing)
+                        .offset(y: 144)
+                }
+                Spacer(minLength: 430)
+            }
+            
+            
+        }
+        .offset(x: isOnTogle ? 174: 0)
+        .animation(.spring())
+            
         VStack {
             Toggle(isOn: $isOnTogle) {
-                Text("Показать мой кошелек")
+                Text("Показать мой кошелек").font(.system(size: 20, weight: .bold))
             }
         }
         .padding()
