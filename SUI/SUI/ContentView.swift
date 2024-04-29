@@ -6,12 +6,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var isOnTogle = false
     var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 20 ).fill(Color.red).offset(x: isOnTogle ? 100: 0)
+            Text("Text").offset(x: isOnTogle ? 100: 0)
+        }.animation(.spring())
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Toggle(isOn: $isOnTogle) {
+                Text("hello")
+            }
         }
         .padding()
     }
