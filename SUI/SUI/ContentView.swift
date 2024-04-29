@@ -31,10 +31,19 @@ struct ContentView: View {
                         .frame(width: 290, height: 30, alignment: .leading)
                         .foregroundColor(Color.white)
                         .font(.system(size: 16))
-                    Image("logo_mir").frame(width: 100, height: 42, alignment: .trailing)
-                        .offset(y: 144)
+                    Image("logo_mir").frame(width: 100, height: 42, alignment: .leading)
+                        .offset(x: 110, y: 144)
                 }
-                Spacer(minLength: 430)
+                
+                Spacer(minLength: 22)
+                
+                ZStack {
+                    Rectangle()
+                        .fill()
+                }
+                
+                
+                Spacer(minLength: 339)
             }
             
             
