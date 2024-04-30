@@ -2,7 +2,6 @@
 //  ContentView.swift
 //  SUI
 
-
 import SwiftUI
 
 struct ContentView: View {

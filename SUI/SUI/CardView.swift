@@ -10,7 +10,7 @@ struct CardView: View {
             RoundedRectangle(cornerRadius: 16 ).fill(Color("ColorCard"))
                 .frame(width: 360, height: 200, alignment: .center)
             
-            Text(Balance.balanceText).offset(y: 16)
+            Text(SidePanel.balanceText).offset(y: 16)
                 .frame(width: 290, height: 30, alignment: .leading)
                 .foregroundColor(Color.white)
                 .font(.system(size: 20, weight: .bold))
