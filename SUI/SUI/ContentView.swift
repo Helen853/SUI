@@ -10,8 +10,16 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
+            
+            HStack(alignment: .top) {
+                SidePanel().offset(y: 8)
+                Spacer()
+            }
+            
+            Spacer()
             Rectangle()
                 .fill(Color("ColorGround"))
+                .offset(x: isOnTogle ? 174: 0)
             
             VStack(alignment: .leading) {
                 Spacer(minLength: 40)
@@ -19,44 +27,20 @@ struct ContentView: View {
                     .frame(width: 290, height: 30, alignment: .leading)
                 Spacer(minLength: 46)
                 
-                ZStack(alignment: .top) {
-                    RoundedRectangle(cornerRadius: 16 ).fill(Color("ColorCard"))
-                        .frame(width: 360, height: 200, alignment: .center)
-                    
-                    Text("50 000,00 ₽").offset(y: 16)
-                        .frame(width: 290, height: 30, alignment: .leading)
-                        .foregroundColor(Color.white)
-                        .font(.system(size: 20, weight: .bold))
-                    Text("доступно").offset(y: 46)
-                        .frame(width: 290, height: 30, alignment: .leading)
-                        .foregroundColor(Color.white)
-                        .font(.system(size: 16))
-                    Image("logo_mir").frame(width: 100, height: 42, alignment: .leading)
-                        .offset(x: 110, y: 144)
-                }
+                CardView()
                 
                 Spacer(minLength: 22)
                 
-                ZStack {
-                    Rectangle()
-                        .fill()
-                }
-                
-                
+                ButtonPanel()
                 Spacer(minLength: 339)
-            }
-            
-            
-        }
-        .offset(x: isOnTogle ? 174: 0)
-        .animation(.spring())
+            }.offset(x: isOnTogle ? 174: 0)
+        }.animation(.spring())
             
         VStack {
             Toggle(isOn: $isOnTogle) {
                 Text("Показать мой кошелек").font(.system(size: 20, weight: .bold))
             }
-        }
-        .padding()
+        }.padding()
     }
 }
 
