@@ -6,6 +6,8 @@ import SwiftUI
 
 struct ButtonPanel: View {
     @State var showAlert = false
+    @State var balance = 100_000
+    
     var body: some View {
         ZStack {
             Rectangle()
@@ -15,7 +17,11 @@ struct ButtonPanel: View {
                 .shadow(radius: 1, y: 4)
             
             HStack(alignment: .bottom, spacing: 14) {
-                Button(action: {}) {
+                Button(action: {
+                    self.balance -= 1000
+                    print(balance)
+                    CardView(allBalance: balance)
+                }) {
                     VStack {
                         Image("Wallet")
                         Text("Пополнить").frame(width: 110, height: 34)
@@ -38,8 +44,9 @@ struct ButtonPanel: View {
                             title: Text("Перевод"),
                             message: Text("Перевести 1000 р на карту1?"),
                             primaryButton: .default(Text("Ок"), action: {
-                                SidePanel.allBalance - 1000
-                                
+                                balance -= 1000
+        
+                                CardView(allBalance: balance)
                             }),
                             secondaryButton: .cancel()
                         )

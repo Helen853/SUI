@@ -5,12 +5,16 @@
 import SwiftUI
 
 struct CardView: View {
+    var allBalance = 100000
+//    @State var thousands = allBalance / 1000
+//    @State var balanceText = "\(String(thousands)) 000,00 ₽"
+    
     var body: some View {
         ZStack(alignment: .top) {
             RoundedRectangle(cornerRadius: 16 ).fill(Color("ColorCard"))
                 .frame(width: 360, height: 200, alignment: .center)
             
-            Text(SidePanel.balanceText).offset(y: 16)
+            Text("\(String(allBalance)),00 ₽").offset(y: 16)
                 .frame(width: 290, height: 30, alignment: .leading)
                 .foregroundColor(Color.white)
                 .font(.system(size: 20, weight: .bold))

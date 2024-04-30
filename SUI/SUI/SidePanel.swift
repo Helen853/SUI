@@ -20,13 +20,46 @@ struct SidePanel: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text(SidePanel.balanceText).frame(width: 110, height: 20, alignment: .leading)
-                .font(.system(size: 14, weight: .bold))
-            Text(SidePanel.balanceText).frame(width: 110, height: 20, alignment: .leading)
-                .font(.system(size: 14, weight: .bold))
-            Text(SidePanel.balanceText).frame(width: 110, height: 20, alignment: .leading)
-                .font(.system(size: 14, weight: .bold))
+            HStack(alignment: .center, spacing: 5) {
+                Image("card")
+                
+                VStack() {
+                    Text(SidePanel.balanceText).frame(width: 110, height: 20, alignment: .leading)
+                        .offset(y: 8)
+                        .font(.system(size: 14, weight: .bold))
+                    Text("MIR  **0001").frame(width: 110, height: 15, alignment: .leading)
+                        .font(.system(size: 10))
+                }
+            }.padding(.leading, 16)
+            Divider()
+            
+            HStack(alignment: .center, spacing: 5) {
+                Image("card")
+                
+                VStack {
+
+                    Text(SidePanel.balanceText2).frame(width: 110, height: 20, alignment: .leading)
+                        .offset(y: 8)
+                        .font(.system(size: 14, weight: .bold))
+                    Text("MIR  **0002").frame(width: 110, height: 15, alignment: .leading)
+                        .font(.system(size: 10))
+                }
+            }.padding(.leading, 16)
+            Divider()
+            
+            HStack(alignment: .center, spacing: 5) {
+                Image("card")
+                
+                VStack {
+                    Text(SidePanel.balanceText3).frame(width: 110, height: 20, alignment: .leading)
+                        .offset(y: 8)
+                        .font(.system(size: 14, weight: .bold))
+                    Text("MIR  **0003").frame(width: 110, height: 15, alignment: .leading)
+                        .font(.system(size: 10))
+                }
+            }.padding(.leading, 16)
+            Divider()
             Spacer()
-        }
+        }.padding(.top, 8)
     }
 }
