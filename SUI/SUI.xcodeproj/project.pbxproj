@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED08CF422BE2C154008059A4 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED08CF412BE2C154008059A4 /* ActivityView.swift */; };
 		ED8F5DB92BDFB162003A3B5B /* SUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8F5DB82BDFB162003A3B5B /* SUIApp.swift */; };
 		ED8F5DBB2BDFB162003A3B5B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8F5DBA2BDFB162003A3B5B /* ContentView.swift */; };
 		ED8F5DBD2BDFB164003A3B5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED8F5DBC2BDFB164003A3B5B /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED08CF412BE2C154008059A4 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		ED8F5DB52BDFB162003A3B5B /* SUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED8F5DB82BDFB162003A3B5B /* SUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUIApp.swift; sourceTree = "<group>"; };
 		ED8F5DBA2BDFB162003A3B5B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 				ED8F5DBA2BDFB162003A3B5B /* ContentView.swift */,
 				ED8F5DBC2BDFB164003A3B5B /* Assets.xcassets */,
 				ED8F5DBE2BDFB164003A3B5B /* Preview Content */,
+				ED08CF412BE2C154008059A4 /* ActivityView.swift */,
 			);
 			path = SUI;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			files = (
 				ED8F5DBB2BDFB162003A3B5B /* ContentView.swift in Sources */,
 				ED8F5DB92BDFB162003A3B5B /* SUIApp.swift in Sources */,
+				ED08CF422BE2C154008059A4 /* ActivityView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
