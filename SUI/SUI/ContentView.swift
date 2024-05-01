@@ -17,7 +17,6 @@ struct ContentView: View {
         Text("Alert & ActionSheet").font(.system(size: 20, weight: .bold))
         Spacer(minLength: 60)
         
-        
         HStack(alignment: .top, spacing: 58) {
             VStack(alignment: .leading, spacing: 24) {
                 Text("Пример Alert").font(.system(size: 14, weight: .bold))
