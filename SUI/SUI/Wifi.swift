@@ -6,6 +6,9 @@
 import SwiftUI
 
 struct WifiView: View {
+    @State var section = 0
+    @State var settingsWifi = ["Подключено", "Не подключено"]
+    
     var body: some View {
         HStack {
             ZStack {
@@ -14,11 +17,14 @@ struct WifiView: View {
                 Image("Wifi")
             }
             
-            
             Text("Wi-Fi")
             Spacer()
-            Text("Не подключено").foregroundColor(Color.gray)
-            Image("next")
+            
+            Picker(selection: $section, label: Text("")) {
+                ForEach(0..<settingsWifi.count) {
+                    Text(settingsWifi[$0])
+                }
+            }.pickerStyle(.navigationLink)
         }
     }
 }

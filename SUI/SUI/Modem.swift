@@ -6,6 +6,10 @@
 import SwiftUI
 
 struct ModemView: View {
+    
+    @State var section = 0
+    @State var settingsModem = ["Вкл", "Выкл"]
+    
     var body: some View {
         HStack {
             ZStack {
@@ -17,8 +21,11 @@ struct ModemView: View {
             
             Text("Режим модема")
             Spacer()
-            Text("Выкл.").foregroundColor(Color.gray)
-            Image("next")
+            Picker(selection: $section, label: Text("")) {
+                ForEach(0..<settingsModem.count) {
+                    Text(settingsModem[$0])
+                }
+            }.pickerStyle(.navigationLink)
         }
     }
 }

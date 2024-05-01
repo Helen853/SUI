@@ -5,6 +5,10 @@
 import SwiftUI
 
 struct BluetoothView: View {
+    
+    @State var section = 0
+    @State var settingsBluetooth = ["Вкл", "Выкл"]
+    
     var body: some View {
         HStack {
             ZStack {
@@ -16,8 +20,11 @@ struct BluetoothView: View {
             
             Text("Bluetooth")
             Spacer()
-            Text("Вкл.").foregroundColor(Color.gray)
-            Image("next")
+            Picker(selection: $section, label: Text("")) {
+                ForEach(0..<settingsBluetooth.count) {
+                    Text(settingsBluetooth[$0])
+                }
+            }.pickerStyle(.navigationLink)
         }
     }
 }
