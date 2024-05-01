@@ -58,6 +58,22 @@ class PlayerViewModel: ObservableObject {
         } catch {
             print("error")
         }
+        
+        let timer = Timer(
+            timeInterval: 0.5,
+            target: self,
+            selector: #selector(setupItem),
+            userInfo: nil,
+            repeats: true
+        )
+        RunLoop.main.add(timer, forMode: .common)
+    }
+    
+    @objc private func setupItem() {
+        let currentTime = Int(player?.currentTime ?? 0)
+        let minutes = currentTime / 60
+        let seconds = currentTime - minutes * 60
+        
     }
 }
 
