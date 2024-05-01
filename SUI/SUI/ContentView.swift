@@ -5,15 +5,35 @@
 
 import SwiftUI
 
+
+
 struct ContentView: View {
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            Form {
+                Section {
+                    InfoView()
+                    RecommendationView()
+                }
+                
+                Section {
+                    VersionView()
+                }
+                
+                Section {
+                    AirView()
+                    WifiView()
+                    BluetoothView()
+                    ConnectionView()
+                    ModemView()
+                    VpnView()
+                }
+                
+            }
+            .navigationTitle("Настройки")
         }
-        .padding()
+        Spacer()
     }
 }
 

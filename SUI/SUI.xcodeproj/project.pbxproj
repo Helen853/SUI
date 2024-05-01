@@ -11,6 +11,15 @@
 		ED8F5DBB2BDFB162003A3B5B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8F5DBA2BDFB162003A3B5B /* ContentView.swift */; };
 		ED8F5DBD2BDFB164003A3B5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED8F5DBC2BDFB164003A3B5B /* Assets.xcassets */; };
 		ED8F5DC02BDFB164003A3B5B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED8F5DBF2BDFB164003A3B5B /* Preview Assets.xcassets */; };
+		EDFB8DA02BE1F15D004DDD6E /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFB8D9F2BE1F15D004DDD6E /* Version.swift */; };
+		EDFB8DA22BE1F188004DDD6E /* Recommendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFB8DA12BE1F188004DDD6E /* Recommendation.swift */; };
+		EDFB8DA42BE1F1AB004DDD6E /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFB8DA32BE1F1AA004DDD6E /* Info.swift */; };
+		EDFB8DA62BE1F259004DDD6E /* Air.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFB8DA52BE1F259004DDD6E /* Air.swift */; };
+		EDFB8DA82BE1F2B5004DDD6E /* Wifi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFB8DA72BE1F2B5004DDD6E /* Wifi.swift */; };
+		EDFB8DAA2BE1F307004DDD6E /* bluetooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFB8DA92BE1F307004DDD6E /* bluetooth.swift */; };
+		EDFB8DAC2BE1F36A004DDD6E /* connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFB8DAB2BE1F36A004DDD6E /* connection.swift */; };
+		EDFB8DAE2BE1F3BC004DDD6E /* Modem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFB8DAD2BE1F3BB004DDD6E /* Modem.swift */; };
+		EDFB8DB02BE1F404004DDD6E /* Vpn.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFB8DAF2BE1F404004DDD6E /* Vpn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +28,15 @@
 		ED8F5DBA2BDFB162003A3B5B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		ED8F5DBC2BDFB164003A3B5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED8F5DBF2BDFB164003A3B5B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EDFB8D9F2BE1F15D004DDD6E /* Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
+		EDFB8DA12BE1F188004DDD6E /* Recommendation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recommendation.swift; sourceTree = "<group>"; };
+		EDFB8DA32BE1F1AA004DDD6E /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
+		EDFB8DA52BE1F259004DDD6E /* Air.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Air.swift; sourceTree = "<group>"; };
+		EDFB8DA72BE1F2B5004DDD6E /* Wifi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wifi.swift; sourceTree = "<group>"; };
+		EDFB8DA92BE1F307004DDD6E /* bluetooth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bluetooth.swift; sourceTree = "<group>"; };
+		EDFB8DAB2BE1F36A004DDD6E /* connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = connection.swift; sourceTree = "<group>"; };
+		EDFB8DAD2BE1F3BB004DDD6E /* Modem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modem.swift; sourceTree = "<group>"; };
+		EDFB8DAF2BE1F404004DDD6E /* Vpn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vpn.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +71,15 @@
 			children = (
 				ED8F5DB82BDFB162003A3B5B /* SUIApp.swift */,
 				ED8F5DBA2BDFB162003A3B5B /* ContentView.swift */,
+				EDFB8D9F2BE1F15D004DDD6E /* Version.swift */,
+				EDFB8DA12BE1F188004DDD6E /* Recommendation.swift */,
+				EDFB8DA32BE1F1AA004DDD6E /* Info.swift */,
+				EDFB8DA52BE1F259004DDD6E /* Air.swift */,
+				EDFB8DA72BE1F2B5004DDD6E /* Wifi.swift */,
+				EDFB8DA92BE1F307004DDD6E /* bluetooth.swift */,
+				EDFB8DAB2BE1F36A004DDD6E /* connection.swift */,
+				EDFB8DAD2BE1F3BB004DDD6E /* Modem.swift */,
+				EDFB8DAF2BE1F404004DDD6E /* Vpn.swift */,
 				ED8F5DBC2BDFB164003A3B5B /* Assets.xcassets */,
 				ED8F5DBE2BDFB164003A3B5B /* Preview Content */,
 			);
@@ -137,7 +164,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDFB8DAA2BE1F307004DDD6E /* bluetooth.swift in Sources */,
+				EDFB8DA62BE1F259004DDD6E /* Air.swift in Sources */,
+				EDFB8DA22BE1F188004DDD6E /* Recommendation.swift in Sources */,
+				EDFB8DB02BE1F404004DDD6E /* Vpn.swift in Sources */,
+				EDFB8DA82BE1F2B5004DDD6E /* Wifi.swift in Sources */,
 				ED8F5DBB2BDFB162003A3B5B /* ContentView.swift in Sources */,
+				EDFB8DAC2BE1F36A004DDD6E /* connection.swift in Sources */,
+				EDFB8DAE2BE1F3BC004DDD6E /* Modem.swift in Sources */,
+				EDFB8DA02BE1F15D004DDD6E /* Version.swift in Sources */,
+				EDFB8DA42BE1F1AB004DDD6E /* Info.swift in Sources */,
 				ED8F5DB92BDFB162003A3B5B /* SUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
