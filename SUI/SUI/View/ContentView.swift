@@ -143,7 +143,7 @@ struct ContentView: View {
                     self.progress = newValue
                     self.viewModel.setTime(value: newValue)
                 }), in: 0...viewModel.maxDuration)
-            Text(album.songs[currentTrackIndex].time)
+            Text(self.viewModel.time)
                 .foregroundColor(.white)
         }
     }

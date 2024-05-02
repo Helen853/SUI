@@ -15,29 +15,14 @@ protocol PlayerViewModelProtocol {
 class PlayerViewModel: ObservableObject {
     @Published public var maxDuration = 0.0
     @Published public var currentIndex = 1
+    @Published public var time = "00:00"
     private var player: AVAudioPlayer?
     private var album = StorageSongs()
-    private var time = ""
+    
     
     public func play(index: Int) {
         playSong(name: album.songs[index].fullName)
         player?.play()
-    }
-    
-    public func returnTime(index: Int) -> String {
-        guard let audioPath = Bundle.main.path(forResource: album.songs[index].fullName, ofType: "mp3") else { return ""}
-        do {
-            try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath))
-            let currentTime = Int(player?.currentTime ?? 0)
-            let minutes = currentTime / 60
-            let seconds = currentTime - minutes * 60
-            time = NSString(format: "%02d:%02d", minutes, seconds) as String
-            print(time)
-        } catch {
-            print("error")
-        }
-        return time
-        
     }
     
     public func stop() {
@@ -62,18 +47,18 @@ class PlayerViewModel: ObservableObject {
         let timer = Timer(
             timeInterval: 0.5,
             target: self,
-            selector: #selector(setupItem),
+            selector: #selector(setupTime),
             userInfo: nil,
             repeats: true
         )
-        RunLoop.main.add(timer, forMode: .common)
+        RunLoop.main.add(timer, forMode: .default)
     }
     
-    @objc private func setupItem() {
+    @objc private func setupTime() {
         let currentTime = Int(player?.currentTime ?? 0)
         let minutes = currentTime / 60
         let seconds = currentTime - minutes * 60
-        
+        time = NSString(format: "%02d:%02d", minutes, seconds) as String
     }
 }
 
