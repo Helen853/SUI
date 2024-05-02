@@ -67,7 +67,7 @@ struct ContentView: View {
         } label: {
             Image(Constants.arrow).frame(alignment: .trailing)
         }.sheet(isPresented: $isShareInfo) {
-            ActivityView(activityItem: ["message"])
+            ActivityView(activityItem: ["Model - \(self.cars.cars[segmentedIndex].name), price: \(self.cars.cars[segmentedIndex].price)"])
         }
     }
     
@@ -111,28 +111,8 @@ struct ContentView: View {
                 HStack {
                     makeText(text: Constants.casco)
                     Spacer()
-                    Toggle(isOn: $isOnTogle) {
-                        
-                    }.onChange(of: isOnTogle, perform: { newValue
-                        in
-                        showAlert = newValue
-                        self.typePrice = .priceCasco
-                    })
-                    .alert(Constants.alertTitle, isPresented: $showAlert) {
-                        Button(Constants.secondButton) {
-                            showAlert = false
-                            self.typePrice = .priceAllCasco
-                        }
-                        Button(Constants.primaryButton) {
-                            showAlert = false
-                            isOnTogle = true
-                            self.typePrice = .priceCasco
-                        }
-                    } message: {
-                        Text(Constants.message)
-                    }
+                    toggleView
                     .padding()
-                        
                 }.frame(height: 25)
                 makeDivider()
                 
@@ -154,6 +134,29 @@ struct ContentView: View {
                 UISlider.appearance().setThumbImage(UIImage(named: Constants.circle), for: .normal)
             }
             .frame(height: 8)
+    }
+    
+    private var toggleView: some View {
+        Toggle(isOn: $isOnTogle) {
+            
+        }.onChange(of: isOnTogle, perform: { newValue
+            in
+            showAlert = newValue
+            self.typePrice = .priceCasco
+        })
+        .alert(Constants.alertTitle, isPresented: $showAlert) {
+            Button(Constants.secondButton) {
+                showAlert = false
+                self.typePrice = .priceAllCasco
+            }
+            Button(Constants.primaryButton) {
+                showAlert = false
+                isOnTogle = true
+                self.typePrice = .priceCasco
+            }
+        } message: {
+            Text(Constants.message)
+        }
     }
     
     private var complectationView: some View {
