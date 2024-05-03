@@ -11,6 +11,8 @@ import Foundation
 struct StorageSongs {
     /// Массив с песнями
     var songs: [Song]
+    
+    // MARK: - Initializers
 
     init() {
         self.songs = [
@@ -18,17 +20,17 @@ struct StorageSongs {
                 songName: "Photograph",
                 singerName: "J. Cole",
                 photoName: "cole",
-                fullName: "J. Cole - Photograph", time: "03:15"),
+                fullName: "J. Cole - Photograph"),
             Song(
                 songName: "jocelyn flowers",
                 singerName: "xxxtentacion",
                 photoName: "xxx",
-                fullName: "xxxtentacion - jocelyn flowers", time: "02:48"),
+                fullName: "xxxtentacion - jocelyn flowers",
             Song(
                 songName: "CANT SAY",
                 singerName: "Travis Scott",
                 photoName: "travis",
-                fullName: "Travis Scott - CANT SAY", time: "03:41")
+                fullName: "Travis Scott - CANT SAY")
         ]
     }
 }

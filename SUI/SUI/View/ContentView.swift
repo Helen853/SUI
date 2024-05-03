@@ -7,6 +7,8 @@ import SwiftUI
 
 struct ContentView: View {
     
+    // MARK: - Constants
+    
     private enum Constants {
         static let colorName = "bacgroundColor"
         static let loadImageName = "load"
@@ -17,16 +19,13 @@ struct ContentView: View {
         static let playImageName = "play"
         static let nextImageName = "next"
         static let stopImageName = "stop"
+        static let circle = "circle"
+        static let primaryButton = "Да"
+        static let secondaryButton = "Нет"
+        static let saveText = "сохранен в папку 'Загрузки'"
     }
     
-    @State private var progress: Double = 0
-    @State private var showACtionSheet = false
-    @State private var isPlaySong = false
-    @State private var showAlert = false
-    @State private var currentTrackIndex = 1
-    @State private var album = StorageSongs()
-    
-    @ObservedObject var viewModel = PlayerViewModel()
+    // MARK: - Public Properties
     
     var body: some View {
         ZStack {
@@ -50,9 +49,18 @@ struct ContentView: View {
                 buttons
             }
         }
-        
-        
     }
+    
+    // MARK: - Private Properties
+    
+    @State private var progress: Double = 0
+    @State private var showACtionSheet = false
+    @State private var isPlaySong = false
+    @State private var showAlert = false
+    @State private var currentTrackIndex = 1
+    @State private var album = StorageSongs()
+    
+    @ObservedObject private var viewModel = PlayerViewModel()
     
     private var operationButtons: some View {
         HStack {
@@ -62,7 +70,7 @@ struct ContentView: View {
                 Image(Constants.loadImageName)
             }.actionSheet(isPresented: $showACtionSheet) {
                 ActionSheet(
-                    title: Text("\(album.songs[self.currentTrackIndex].songName) сохранен в папку 'Загрузки'"),
+                    title: Text("\(album.songs[self.currentTrackIndex].songName) \(Constants.saveText)"),
                     buttons: [.default(Text(Constants.actionButtonTitle))]
                 )
             }
@@ -72,7 +80,8 @@ struct ContentView: View {
             } label: {
                 Image(Constants.arrowImageName)
             }.alert(isPresented: $showAlert) {
-                Alert(title: Text(Constants.alertTitle))
+                Alert(title: Text(Constants.alertTitle), primaryButton: .default(Text(Constants.primaryButton)), secondaryButton: .cancel(Text(Constants.secondaryButton)))
+                
             }
 
         }
@@ -143,6 +152,10 @@ struct ContentView: View {
                     self.progress = newValue
                     self.viewModel.setTime(value: newValue)
                 }), in: 0...viewModel.maxDuration)
+            .onAppear {
+                UISlider.appearance().setThumbImage(UIImage(named: Constants.circle), for: .normal)
+            }
+            
             Text(self.viewModel.time)
                 .foregroundColor(.white)
         }

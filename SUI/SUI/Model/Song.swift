@@ -15,6 +15,4 @@ struct Song {
     var photoName: String
     /// Полное наименование трека
     var fullName: String
-    /// Время трека
-    var time: String
 }

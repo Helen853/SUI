@@ -5,36 +5,41 @@
 import AVFoundation
 import Foundation
 
-protocol PlayerViewModelProtocol {
-    func play()
-    func stop()
-    func setTime(value: Double)
-    func playSong(name: String)
-}
-
-class PlayerViewModel: ObservableObject {
+/// ViewModel для плеера
+final class PlayerViewModel: ObservableObject {
+    
+    // MARK: - Public Properties
+    
     @Published public var maxDuration = 0.0
     @Published public var currentIndex = 1
     @Published public var time = "00:00"
+    
+    // MARK: - Private Properties
+    
     private var player: AVAudioPlayer?
     private var album = StorageSongs()
     
+    // MARK: - Public Methods
     
+    /// Воспроизведение песни
     public func play(index: Int) {
         playSong(name: album.songs[index].fullName)
         player?.play()
     }
     
+    /// Остановка воспроизведения
     public func stop() {
         player?.stop()
     }
     
+    /// Установка времени
     public func setTime(value: Double) {
         guard let time = TimeInterval(exactly: value) else { return }
         player?.currentTime = time
         player?.play()
     }
     
+    /// Воспроизведение конкретной песни
     private func playSong(name: String) {
         guard let audioPath = Bundle.main.path(forResource: name, ofType: "mp3") else { return }
         do {
@@ -54,6 +59,8 @@ class PlayerViewModel: ObservableObject {
         RunLoop.main.add(timer, forMode: .default)
     }
     
+    /// Установка актуального времени
+    /// 
     @objc private func setupTime() {
         let currentTime = Int(player?.currentTime ?? 0)
         let minutes = currentTime / 60
