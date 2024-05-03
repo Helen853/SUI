@@ -5,7 +5,7 @@
 
 import Foundation
 
-/// Модель с информацией о фильме
+/// Модель с информацией о песне
 struct Song {
     /// Наименование песни
     var songName: String

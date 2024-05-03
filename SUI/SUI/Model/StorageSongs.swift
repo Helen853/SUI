@@ -7,12 +7,10 @@
 
 import Foundation
 
-/// Хранилище информации о песняъ
+/// Хранилище информации о песнях
 struct StorageSongs {
     /// Массив с песнями
     var songs: [Song]
-    
-    // MARK: - Initializers
 
     init() {
         self.songs = [
@@ -25,7 +23,7 @@ struct StorageSongs {
                 songName: "jocelyn flowers",
                 singerName: "xxxtentacion",
                 photoName: "xxx",
-                fullName: "xxxtentacion - jocelyn flowers",
+                fullName: "xxxtentacion - jocelyn flowers"),
             Song(
                 songName: "CANT SAY",
                 singerName: "Travis Scott",

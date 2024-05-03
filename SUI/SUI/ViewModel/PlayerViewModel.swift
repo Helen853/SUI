@@ -60,7 +60,6 @@ final class PlayerViewModel: ObservableObject {
     }
     
     /// Установка актуального времени
-    /// 
     @objc private func setupTime() {
         let currentTime = Int(player?.currentTime ?? 0)
         let minutes = currentTime / 60

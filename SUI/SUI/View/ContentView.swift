@@ -2,12 +2,9 @@
 //  ContentView.swift
 //  SUI
 
-
 import SwiftUI
 
 struct ContentView: View {
-    
-    // MARK: - Constants
     
     private enum Constants {
         static let colorName = "bacgroundColor"
@@ -25,8 +22,6 @@ struct ContentView: View {
         static let saveText = "сохранен в папку 'Загрузки'"
     }
     
-    // MARK: - Public Properties
-    
     var body: some View {
         ZStack {
             Color(Constants.colorName)
@@ -36,22 +31,16 @@ struct ContentView: View {
                 Image(album.songs[self.currentTrackIndex].photoName)
                     .cornerRadius(12)
                     .frame(width: 280, height: 280)
-                    
-                    
                 HStack {
                     infoSingView
                     Spacer()
                     operationButtons
                 }.padding()
-                
                sliderView.padding()
-                
                 buttons
             }
         }
     }
-    
-    // MARK: - Private Properties
     
     @State private var progress: Double = 0
     @State private var showACtionSheet = false
@@ -74,16 +63,13 @@ struct ContentView: View {
                     buttons: [.default(Text(Constants.actionButtonTitle))]
                 )
             }
-            
             Button {
                 showAlert = true
             } label: {
                 Image(Constants.arrowImageName)
             }.alert(isPresented: $showAlert) {
                 Alert(title: Text(Constants.alertTitle), primaryButton: .default(Text(Constants.primaryButton)), secondaryButton: .cancel(Text(Constants.secondaryButton)))
-                
             }
-
         }
     }
     
@@ -113,7 +99,6 @@ struct ContentView: View {
             } label: {
                 Image(Constants.previousImageName)
             }.frame(width: 60, height: 60)
-            
             Button {
                 isPlaySong.toggle()
                 isPlaySong ? self.viewModel.play(index: currentTrackIndex) : self.viewModel.stop()
@@ -125,7 +110,6 @@ struct ContentView: View {
                     Image(Constants.playImageName)
                 }
             }.frame(width: 66.67, height: 66.67)
-            
             Button {
                 if currentTrackIndex < album.songs.count - 1 {
                     currentTrackIndex += 1
@@ -137,10 +121,8 @@ struct ContentView: View {
             } label: {
                 Image(Constants.nextImageName)
             }.frame(width: 60, height: 60)
-            
         }
     }
-    
     
     private var sliderView: some View {
         HStack {
@@ -155,12 +137,10 @@ struct ContentView: View {
             .onAppear {
                 UISlider.appearance().setThumbImage(UIImage(named: Constants.circle), for: .normal)
             }
-            
             Text(self.viewModel.time)
                 .foregroundColor(.white)
         }
     }
-    
 }
 
 struct ContentView_Previews: PreviewProvider {
