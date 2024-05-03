@@ -11,6 +11,12 @@
 		ED8F5DBB2BDFB162003A3B5B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8F5DBA2BDFB162003A3B5B /* ContentView.swift */; };
 		ED8F5DBD2BDFB164003A3B5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED8F5DBC2BDFB164003A3B5B /* Assets.xcassets */; };
 		ED8F5DC02BDFB164003A3B5B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED8F5DBF2BDFB164003A3B5B /* Preview Assets.xcassets */; };
+		EDCE08FD2BE255CD002DD69A /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCE08FC2BE255CD002DD69A /* PlayerViewModel.swift */; };
+		EDCE09022BE27CFB002DD69A /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCE09012BE27CFB002DD69A /* Song.swift */; };
+		EDCE09092BE281D4002DD69A /* StorageSongs.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCE09082BE281D4002DD69A /* StorageSongs.swift */; };
+		EDCE090F2BE28BDD002DD69A /* J. Cole - Photograph.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCE090C2BE28BDD002DD69A /* J. Cole - Photograph.mp3 */; };
+		EDCE09102BE28BDD002DD69A /* Travis Scott - CANT SAY.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCE090D2BE28BDD002DD69A /* Travis Scott - CANT SAY.mp3 */; };
+		EDCE09112BE28BDD002DD69A /* xxxtentacion - jocelyn flowers.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCE090E2BE28BDD002DD69A /* xxxtentacion - jocelyn flowers.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,12 @@
 		ED8F5DBA2BDFB162003A3B5B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		ED8F5DBC2BDFB164003A3B5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED8F5DBF2BDFB164003A3B5B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EDCE08FC2BE255CD002DD69A /* PlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
+		EDCE09012BE27CFB002DD69A /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		EDCE09082BE281D4002DD69A /* StorageSongs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageSongs.swift; sourceTree = "<group>"; };
+		EDCE090C2BE28BDD002DD69A /* J. Cole - Photograph.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "J. Cole - Photograph.mp3"; path = "../../../../J. Cole - Photograph.mp3"; sourceTree = "<group>"; };
+		EDCE090D2BE28BDD002DD69A /* Travis Scott - CANT SAY.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Travis Scott - CANT SAY.mp3"; path = "../../../../Travis Scott - CANT SAY.mp3"; sourceTree = "<group>"; };
+		EDCE090E2BE28BDD002DD69A /* xxxtentacion - jocelyn flowers.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "xxxtentacion - jocelyn flowers.mp3"; path = "../../../../xxxtentacion - jocelyn flowers.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +63,13 @@
 		ED8F5DB72BDFB162003A3B5B /* SUI */ = {
 			isa = PBXGroup;
 			children = (
+				EDCE090C2BE28BDD002DD69A /* J. Cole - Photograph.mp3 */,
+				EDCE090D2BE28BDD002DD69A /* Travis Scott - CANT SAY.mp3 */,
+				EDCE090E2BE28BDD002DD69A /* xxxtentacion - jocelyn flowers.mp3 */,
+				EDCE08FB2BE2557A002DD69A /* ViewModel */,
+				EDCE08FA2BE2556B002DD69A /* View */,
+				EDCE08F92BE25563002DD69A /* Model */,
 				ED8F5DB82BDFB162003A3B5B /* SUIApp.swift */,
-				ED8F5DBA2BDFB162003A3B5B /* ContentView.swift */,
 				ED8F5DBC2BDFB164003A3B5B /* Assets.xcassets */,
 				ED8F5DBE2BDFB164003A3B5B /* Preview Content */,
 			);
@@ -65,6 +82,31 @@
 				ED8F5DBF2BDFB164003A3B5B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EDCE08F92BE25563002DD69A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EDCE09012BE27CFB002DD69A /* Song.swift */,
+				EDCE09082BE281D4002DD69A /* StorageSongs.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EDCE08FA2BE2556B002DD69A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ED8F5DBA2BDFB162003A3B5B /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EDCE08FB2BE2557A002DD69A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EDCE08FC2BE255CD002DD69A /* PlayerViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +167,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDCE09112BE28BDD002DD69A /* xxxtentacion - jocelyn flowers.mp3 in Resources */,
 				ED8F5DC02BDFB164003A3B5B /* Preview Assets.xcassets in Resources */,
+				EDCE090F2BE28BDD002DD69A /* J. Cole - Photograph.mp3 in Resources */,
 				ED8F5DBD2BDFB164003A3B5B /* Assets.xcassets in Resources */,
+				EDCE09102BE28BDD002DD69A /* Travis Scott - CANT SAY.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +182,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDCE08FD2BE255CD002DD69A /* PlayerViewModel.swift in Sources */,
+				EDCE09022BE27CFB002DD69A /* Song.swift in Sources */,
 				ED8F5DBB2BDFB162003A3B5B /* ContentView.swift in Sources */,
 				ED8F5DB92BDFB162003A3B5B /* SUIApp.swift in Sources */,
+				EDCE09092BE281D4002DD69A /* StorageSongs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,7 +243,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -249,7 +297,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -274,6 +322,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,6 +351,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
