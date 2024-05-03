@@ -10,6 +10,8 @@ struct StorageInfoCar {
     /// Массив с авто
     var cars: [Car]
     
+    // MARK: - Initializers
+    
     init() {
         self.cars = [
             Car(name: "C5", imageName: "c5", price: 2189900),

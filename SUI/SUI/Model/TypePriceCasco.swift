@@ -5,7 +5,7 @@
 
 import Foundation
 
-/// Тип цена
+/// Тип цены с каско
 enum TypePriceCasco {
     /// Цена с каско
     case priceCasco

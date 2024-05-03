@@ -2,10 +2,12 @@
 //  ContentView.swift
 //  SUI
 
-
 import SwiftUI
 
 struct ContentView: View {
+    
+    // MARK: - Constants
+    
     private enum Constants {
         static let logoName = "logo"
         static let color = "grayForGraund"
@@ -27,20 +29,9 @@ struct ContentView: View {
         static let message = "Подключить Каско на выгодных условиях?"
         static let primaryButton = "Нет, не нужно"
         static let secondButton = "Да"
-        
     }
-    @State private var segmentedIndex = 0
-    @State private var progress: Double = 2
-    @State private var isShareInfo = false
-    @State private var isOnTogle = false
-    @State private var showActionSheet = false
-    @State private var showAlert = false
-    @State private var currentPrice = 0
-    @State private var typePrice: TypePriceCasco = .priceCasco
     
-    @ObservedObject var viewModel = CarViewModel()
-    @State private var cars = StorageInfoCar()
-
+    // MARK: - Public Properties
     
     var body: some View {
         VStack {
@@ -56,10 +47,24 @@ struct ContentView: View {
             Image(cars.cars[segmentedIndex].imageName)
                 .frame(width: 345, height: 198)
             Spacer(minLength: 22)
-            pickerView
+            segmentPicker
             infoView
         }.background(Color(Constants.color))
     }
+    
+    // MARK: - Private Properties
+    
+    @State private var segmentedIndex = 0
+    @State private var progress: Double = 2
+    @State private var isShareInfo = false
+    @State private var isOnTogle = false
+    @State private var showActionSheet = false
+    @State private var showAlert = false
+    @State private var currentPrice = 0
+    @State private var typePrice: TypePriceCasco = .priceCasco
+    @State private var cars = StorageInfoCar()
+    
+    @ObservedObject private var viewModel = CarViewModel()
     
     private var shareButton: some View {
         Button {
@@ -71,7 +76,7 @@ struct ContentView: View {
         }
     }
     
-    private var pickerView: some View {
+    private var segmentPicker: some View {
         Picker(selection: $segmentedIndex, label: Text("cars")) {
             ForEach(0..<cars.cars.count) {
                 Text(self.cars.cars[$0].name)
@@ -111,7 +116,7 @@ struct ContentView: View {
                 HStack {
                     makeText(text: Constants.casco)
                     Spacer()
-                    toggleView
+                    cascoToggle
                     .padding()
                 }.frame(height: 25)
                 makeDivider()
@@ -126,7 +131,7 @@ struct ContentView: View {
         }
     }
     
-    private var sliderView: some View {
+    private var typeSlider: some View {
         Slider(value: $progress, in: 1...6, step: 1)
             .accentColor(.black)
             .padding()
@@ -136,7 +141,7 @@ struct ContentView: View {
             .frame(height: 8)
     }
     
-    private var toggleView: some View {
+    private var cascoToggle: some View {
         Toggle(isOn: $isOnTogle) {
             
         }.onChange(of: isOnTogle, perform: { newValue
@@ -162,7 +167,7 @@ struct ContentView: View {
     private var complectationView: some View {
         VStack(alignment: .leading) {
             makeText(text: Constants.equipment)
-            sliderView
+            typeSlider
             
             HStack(spacing: 14) {
                 ForEach(0..<Constants.typeComplectation.count) {
@@ -190,7 +195,9 @@ struct ContentView: View {
             }
     }
     
-    func makeText(text: String) -> some View {
+    // MARK: - Private Methods
+    
+    private func makeText(text: String) -> some View {
         Text(text)
             .frame(height: 19, alignment: .leading)
             .foregroundColor(.black)
@@ -198,7 +205,7 @@ struct ContentView: View {
             .padding()
     }
     
-    func makeBoldText(text: String) -> some View {
+    private func makeBoldText(text: String) -> some View {
         Text(text)
             .frame(height: 20, alignment: .leading)
             .foregroundColor(.black)
@@ -206,12 +213,12 @@ struct ContentView: View {
             .padding()
     }
     
-    func makeDivider() -> some View {
+    private func makeDivider() -> some View {
         Divider()
             .frame(width: 250)
     }
     
-    func returnPrice() -> String {
+    private func returnPrice() -> String {
         if isOnTogle {
             switch typePrice {
             case .priceCasco:

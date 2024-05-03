@@ -2,7 +2,6 @@
 //  ActivityView.swift
 //  SUI
 
-
 import SwiftUI
 
 struct ActivityView: UIViewControllerRepresentable {
