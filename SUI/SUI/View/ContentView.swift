@@ -82,9 +82,9 @@ struct ContentView: View {
                 Text(self.cars.cars[$0].name)
             }
         }.pickerStyle(.segmented)
-            .background(.white)
+            .background(Color.white)
+            .cornerRadius(8)
             .frame(height: 44)
-            .cornerRadius(15)
             .padding()
     }
     
