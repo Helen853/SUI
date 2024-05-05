@@ -16,11 +16,10 @@ struct VpnView: View {
         static let numberIp = "127.0.0.1"
         static let mb = "MB"
         static let service = "Service will expire after 15 days."
+        static let countSentMb = 0
     }
     
     @State var isOnToggle = false
-    @State var countMB = 0
-    @State var countSentMb = 0
     
     @ObservedObject var viewModel = VpnViewModel()
     
@@ -33,6 +32,8 @@ struct VpnView: View {
                 .frame(width: 31)
                 .onChange(of: isOnToggle) { newValue in
                     self.viewModel.start(load: isOnToggle)
+                    self.viewModel.startSent(load: isOnToggle)
+                    
                 }
 
             Spacer(minLength: 55)
@@ -46,7 +47,7 @@ struct VpnView: View {
                 VStack(alignment: .trailing, spacing: 14) {
                     Text(Constants.numberIp)
                     Text("\(String(self.viewModel.countMb)) \(Constants.mb)")
-                    Text("\(String(self.countMB)) \(Constants.mb)")
+                    Text("\(String(self.viewModel.countSentMb)) \(Constants.mb)")
                 }.bold()
             }
             Spacer(minLength: 187)
