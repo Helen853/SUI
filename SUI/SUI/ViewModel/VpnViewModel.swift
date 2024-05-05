@@ -56,14 +56,12 @@ final class VpnViewModel: ObservableObject {
     @objc private func setupSentMb() {
         guard (timerSent != nil) else { return }
         self.countSentMb += 26
-        print(countSentMb)
     }
     
     /// Установка актуального кол-ва мб
     @objc private func setupMb() {
         guard (timerRecived != nil) else { return }
         self.countMb += 43
-        print(countMb)
     }
     
 }

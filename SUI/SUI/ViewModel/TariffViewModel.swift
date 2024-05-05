@@ -20,7 +20,6 @@ final class TariffViewModel: ObservableObject {
         case .standartPlus:
             addedTariff.append(tariffList.tariffs[2])
         }
-        print(addedTariff)
     }
     
     /// Удаление тарифа с массива для корзины
