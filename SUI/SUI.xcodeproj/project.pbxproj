@@ -11,6 +11,14 @@
 		ED8F5DBB2BDFB162003A3B5B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8F5DBA2BDFB162003A3B5B /* ContentView.swift */; };
 		ED8F5DBD2BDFB164003A3B5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED8F5DBC2BDFB164003A3B5B /* Assets.xcassets */; };
 		ED8F5DC02BDFB164003A3B5B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED8F5DBF2BDFB164003A3B5B /* Preview Assets.xcassets */; };
+		EDD7DB022BE7839000D4E9E8 /* Tariff.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD7DB012BE7839000D4E9E8 /* Tariff.swift */; };
+		EDD7DB072BE79BDE00D4E9E8 /* TariffViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD7DB062BE79BDE00D4E9E8 /* TariffViewModel.swift */; };
+		EDD7DB092BE79C8E00D4E9E8 /* VpnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD7DB082BE79C8E00D4E9E8 /* VpnView.swift */; };
+		EDD7DB0B2BE79CBD00D4E9E8 /* TariffView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD7DB0A2BE79CBD00D4E9E8 /* TariffView.swift */; };
+		EDD7DB0D2BE7CDEA00D4E9E8 /* TypeTariff.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD7DB0C2BE7CDEA00D4E9E8 /* TypeTariff.swift */; };
+		EDD7DB0F2BE80BE500D4E9E8 /* BasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD7DB0E2BE80BE500D4E9E8 /* BasketView.swift */; };
+		EDD7DB112BE80C0B00D4E9E8 /* AddedTarifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD7DB102BE80C0B00D4E9E8 /* AddedTarifView.swift */; };
+		EDD7DB132BE8121A00D4E9E8 /* VpnViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD7DB122BE8121A00D4E9E8 /* VpnViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +27,14 @@
 		ED8F5DBA2BDFB162003A3B5B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		ED8F5DBC2BDFB164003A3B5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED8F5DBF2BDFB164003A3B5B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EDD7DB012BE7839000D4E9E8 /* Tariff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tariff.swift; sourceTree = "<group>"; };
+		EDD7DB062BE79BDE00D4E9E8 /* TariffViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TariffViewModel.swift; sourceTree = "<group>"; };
+		EDD7DB082BE79C8E00D4E9E8 /* VpnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VpnView.swift; sourceTree = "<group>"; };
+		EDD7DB0A2BE79CBD00D4E9E8 /* TariffView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TariffView.swift; sourceTree = "<group>"; };
+		EDD7DB0C2BE7CDEA00D4E9E8 /* TypeTariff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeTariff.swift; sourceTree = "<group>"; };
+		EDD7DB0E2BE80BE500D4E9E8 /* BasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketView.swift; sourceTree = "<group>"; };
+		EDD7DB102BE80C0B00D4E9E8 /* AddedTarifView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedTarifView.swift; sourceTree = "<group>"; };
+		EDD7DB122BE8121A00D4E9E8 /* VpnViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VpnViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +67,10 @@
 		ED8F5DB72BDFB162003A3B5B /* SUI */ = {
 			isa = PBXGroup;
 			children = (
+				EDD7DB052BE79BAC00D4E9E8 /* ViewModel */,
+				EDD7DB042BE79BA400D4E9E8 /* Model */,
+				EDD7DB032BE79B9B00D4E9E8 /* View */,
 				ED8F5DB82BDFB162003A3B5B /* SUIApp.swift */,
-				ED8F5DBA2BDFB162003A3B5B /* ContentView.swift */,
 				ED8F5DBC2BDFB164003A3B5B /* Assets.xcassets */,
 				ED8F5DBE2BDFB164003A3B5B /* Preview Content */,
 			);
@@ -65,6 +83,36 @@
 				ED8F5DBF2BDFB164003A3B5B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EDD7DB032BE79B9B00D4E9E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ED8F5DBA2BDFB162003A3B5B /* ContentView.swift */,
+				EDD7DB082BE79C8E00D4E9E8 /* VpnView.swift */,
+				EDD7DB0A2BE79CBD00D4E9E8 /* TariffView.swift */,
+				EDD7DB0E2BE80BE500D4E9E8 /* BasketView.swift */,
+				EDD7DB102BE80C0B00D4E9E8 /* AddedTarifView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EDD7DB042BE79BA400D4E9E8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EDD7DB012BE7839000D4E9E8 /* Tariff.swift */,
+				EDD7DB0C2BE7CDEA00D4E9E8 /* TypeTariff.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EDD7DB052BE79BAC00D4E9E8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EDD7DB062BE79BDE00D4E9E8 /* TariffViewModel.swift */,
+				EDD7DB122BE8121A00D4E9E8 /* VpnViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +185,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDD7DB0F2BE80BE500D4E9E8 /* BasketView.swift in Sources */,
+				EDD7DB112BE80C0B00D4E9E8 /* AddedTarifView.swift in Sources */,
+				EDD7DB0B2BE79CBD00D4E9E8 /* TariffView.swift in Sources */,
+				EDD7DB072BE79BDE00D4E9E8 /* TariffViewModel.swift in Sources */,
+				EDD7DB0D2BE7CDEA00D4E9E8 /* TypeTariff.swift in Sources */,
+				EDD7DB092BE79C8E00D4E9E8 /* VpnView.swift in Sources */,
+				EDD7DB022BE7839000D4E9E8 /* Tariff.swift in Sources */,
+				EDD7DB132BE8121A00D4E9E8 /* VpnViewModel.swift in Sources */,
 				ED8F5DBB2BDFB162003A3B5B /* ContentView.swift in Sources */,
 				ED8F5DB92BDFB162003A3B5B /* SUIApp.swift in Sources */,
 			);
